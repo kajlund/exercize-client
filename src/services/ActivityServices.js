@@ -20,7 +20,19 @@ async function fetchActivities() {
   }
 }
 
+async function fetchActivity(id) {
+  try {
+    const response = await apiClient.get(`/activities/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching activity:', error);
+    throw error;
+  }
+}
+
+
 export default {
   fetchActivities,
+  fetchActivity,
 }
 

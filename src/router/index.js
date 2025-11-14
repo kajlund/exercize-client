@@ -2,18 +2,27 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue';
+import ActivityDetails from '@/views/ActivityDetails.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [{
-    path: '/',
-    name: 'home',
-    component: HomeView,
-  }, {
-    path: '/about',
-    name: 'about',
-    componenet: AboutView,
-  }],
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+    },
+    {
+      path: '/activity/:id',
+      name: 'activity-details',
+      props: true,
+      component: ActivityDetails,
+    }, {
+      path: '/about',
+      name: 'about',
+      component: AboutView,
+    }
+  ],
 })
 
 export default router

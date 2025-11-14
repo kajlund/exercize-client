@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 defineProps({
   activity: {
     type: Object,
@@ -8,10 +10,12 @@ defineProps({
 </script>
 
 <template>
+  <RouterLink class="activity-link" :to="{ name: 'activity-details', params: { id: activity.id } }">
   <div class="activity-card">
     <h2>{{ activity.title }}</h2>
     <span>{{ activity.when }}</span>
   </div>
+  </RouterLink>
 </template>
 
 <style scoped>
@@ -21,6 +25,7 @@ defineProps({
   width: 250px;
   cursor: pointer;
   border: 1px solid #39495c;
+  border-radius: 1rem;
   margin-bottom: 18px;
 }
 
@@ -31,5 +36,9 @@ defineProps({
 .activity-card h2 {
   font-size: 2rem;
   color: #f0a500;
+}
+.activity-link {
+  color: #39495c;
+  text-decoration: none;
 }
 </style>
