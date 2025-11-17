@@ -102,3 +102,97 @@ p {
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 4rem;
+  max-width: 40rem;
+  /* border: 1px solid var(--color-accent1);
+  border-radius: 2rem; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-accent1);
+  border-radius: 1rem;
+  padding: 0 2rem;
+}
+
+fieldset.commands {
+  display: block;
+  border: none;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+legend {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-accent1);
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+label {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent3);
+  margin-left: 0.4rem;
+  text-align: start;
+}
+
+select {
+  flex: 1;
+  padding: 0.6rem 0;
+  font-size: var(--font-size-md);
+  border: 1px solid var(--color-accent1);
+  border-radius: 0.5rem;
+}
+
+.field {
+  flex: 1;
+  padding: 0.6rem 0.4rem;
+  font-size: var(--font-size-md);
+  border: 1px solid var(--color-accent1);
+  border-radius: 0.5rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+btn:hover {
+  background-color: #0056b3;
+}
+
+btn:active {
+  background-color: #004494;
+}
+
+.error {
+  text-align: start;
+  color: var(--color-error-md);
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  margin-left: 0.4rem;
+}

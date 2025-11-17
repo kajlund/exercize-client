@@ -10,6 +10,17 @@ const apiClient = axios.create({
   },
 });
 
+async function createActivity(data) {
+  try {
+    const response = await apiClient.post('/activities', data);
+    return response.data;
+
+  } catch (error) {
+    console.error('Error creating activity:', error);
+    throw error;
+  }
+}
+
 async function fetchActivities() {
   try {
     const response = await apiClient.get('/activities');
@@ -30,8 +41,8 @@ async function fetchActivity(id) {
   }
 }
 
-
 export default {
+  createActivity,
   fetchActivities,
   fetchActivity,
 }
